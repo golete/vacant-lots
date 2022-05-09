@@ -1,6 +1,6 @@
 # What's in a Vacant Lot?
-Data Dashboard and Development Risk Assessment for Vacant Lots in Philadelphia
-A project from the Weitzman School of Design Smart Cities Practicum in collaboration with Philadelphia Legal Assistance
+* Data Dashboard and Development Risk Assessment for Vacant Lots in Philadelphia
+* A project from the Weitzman School of Design Smart Cities Practicum in collaboration with Philadelphia Legal Assistance
 
 ## Description
 
