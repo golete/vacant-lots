@@ -1,4 +1,6 @@
-# MUSA 611 - Java Script for Planners Final Project
+# What's in a Vacant Lot?
+## Data Dashboard and Development Risk Assessment for Vacant Lots in Philadelphia
+A project from the Weitzman School of Design Smart Cities Practicum in collaboration with Philadelphia Legal Assistance
 
 ## Description
 
@@ -9,3 +11,5 @@ The intention of the story map is to guide a user that is not familiar with the 
 ## Data
 
 The project used data from Open Data Philly, including, properties, vacant lots, real estate delinquencies, real estate transfers, L&I Zoning Permits. It also implements data from the 2019 American Community Survey to determine the divide between majority-white and majority-minority neighborhoods, as well as the divide in above and below median income households. This data was preprocessed and condensed for the purposes of the Smart Cities Practicum project and exported into several files to be read by this application.
+
+## 
