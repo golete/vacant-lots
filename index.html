@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+
+
+  <div class="header hidden">
+    <div class="bttn-container">
+      <a class="btn btn-primary" href="layoutDS.html" role="button" id="header-bttn">Go to Interactive Tool</a>
+      <button type="button" class="btn btn-outline-primary" id="header-bttn">En Español</button>
+    </div>
+  </div>
+
+
+  <div class="insert">
+    <div class="section">
+      <div class="title-container">
+        <h1 id="title">What's in a Vacant Lot</h1>
+        <h4 id="subtitle">Data Dashboard and Development Risk Assessment for Vacant Lots in Philadelphia</h4>
+      </div>
+
+      <div class="title-credits">
+        <h6>A project from the Weitzman School of Design Smart Cities Practicum</h6>
+        <h6>in collaboration with Philadelphia Legal Assistance</h6>
+      </div>
+
+      <div class="title-bttn-container d-grid gap-2 col-4 mx-auto">
+        <a class="btn btn-outline-primary" href="layoutDS.html" role="button" id="title-bttn">Go to Interactive Tool</a>
+        <a class="btn btn-primary" href="#hover-01" role="button" id="title-bttn-primary">Begin Story</a>
+      </div>
+    </div>
+
+    <div class="section-sticky" id="insert-01">
+      <img src='img\vacantLots-GIF-1.gif' id='background-gif'/>
+    </div>
+
+    <div class="slide-complete" id="hover-01">
+      <div class="subtitle-container">
+        <h2>What's in a Vacant Lot?</h2>
+      </div>
+      <br></br>
+      <svg class="arrows">
+        <path class="a1" d="M0 0 L30 32 L60 0"></path>
+        <path class="a2" d="M0 20 L30 52 L60 20"></path>
+        <path class="a3" d="M0 40 L30 72 L60 40"></path>
+      </svg>
+      <p>scroll down</p>
+    </div>
+  </div>
+
+  <!-- Map goes here -->
+  <div class="map-container">
+    <div class="map" id="map"></div>
+  </div>
+
+  <div class="super">
+    <!-- First set of slides -->
+    <div class="slides" id="slides-01"></div>
+
+    <!-- Second complete slide -->
+    <div class="insert">
+      <div class="section-sticky" id="insert-02">
+        <img src='img\vacantLots-GIF-2.gif' id='background-gif'/>
+      </div>
+
+      <div class="slide-complete" id="hover-02">
+        <div class="subtitle-container">
+          <h2>How does this happen?</h2>
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-03">
+        <div class="subtitle-container">
+          <h3>A Property's Life Cycle</h3>
+          <p class="ps">When an owner abandons a property and stops paying taxes, the City of Philadelphia can initiate a foreclosure to sell the property through a public auction known as a sheriff's sale.</p>
+          <img src="img/diagram-01-propertylifecycle-01.png" class="diagram" alt="Properties Life Cycle">
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-04">
+        <div class="quote-container">
+          <div class="quote">Typically, my clients have been searching for guidance on how to pay the outstanding taxes on their home-adjacent yards and clarify the title to their properties for years without any luck. In many cases, title to the property and OPA accounts are in the names of long-gone or deceased persons [...] so they never receive notice of legal actions on the property. This means properties are regularly sold without any notice to those who have cared for these spaces for years.</div>
+          <div class="quote-author">Andria Bibiloni, Philadelphia Legal Assistance</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="map-container">
+    <div class="map" id="map"></div>
+  </div>
+
+  <!-- Second set of slides -->
+  <div class="super">
+    <div class="slides" id="slides-02"></div>
+
+    <div class="insert">
+      <!-- Third complete slide -->
+      <div class="section-sticky" id="insert-03">
+        <img src='img\vacantLots-GIF-3.gif' id='background-gif'/>
+      </div>
+      <div class="slide-complete" id="hover-05">
+        <div class="subtitle-container">
+          <h2>What's behind this?</h2>
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-07">
+        <div class="subtitle-container">
+          <p class="ps">Increased activity in the Philadelphia real estate market in the past decade is likely a major driver of the rising interest in vacant land. To visualize this growth, we can look to where developers are filing <b>zoning permit applications</b>. Because real estate developers will often apply for zoning permits early in the planning and financing stage, these applications can serve as a leading indicator of future development.</p>
+          <img src="img\diagram-05-permits.png" class="diagram" alt="Properties Life Cycle">
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-06">
+        <div class="subtitle-container">
+          <h3>Development Activity</h3>
+          <p class="ps">A visualization of zoning permit applications over the last 15 years demonstrates how interest in the Philadelphia real estate market has intensified. As development interest has increased, so too has the value of vacant land, making parcels that previously may have been overlooked by the market more viable for new development. Tax foreclosures and sheriff sales are thus a natural response to this increased interest and can help to restore vacant and underused land to productive use—that is, for properties which are not already being used by the surrounding community.</p>
+        </div>
+        <div class="diagram-container">
+          <img src="img\diagram-02-permits-A.gif" class="diagram" alt="Zoning Permits by Quarter">
+        </div>
+      </div>
+
+
+
+      <div class="slide-complete" id="hover-08">
+        <div class="quote-container">
+          <div class="quote">This is a massive wave of new construction. Much bigger than we’ve even seen before. This surge is indicative of developers being very bullish. Otherwise they wouldn't have bothered filling for all those permits.</div>
+          <div class="quote-author">Kevin Gillen, Lindy Institute for Urban Innovation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-container">
+    <div class="map" id="map"></div>
+  </div>
+
+  <!-- Third set of slides -->
+  <div class="super">
+    <div class="slides" id="slides-03"></div>
+
+    <div class="insert">
+      <div class="section-sticky" id="insert-04">
+        <img src='img\vacantLots-GIF-4.gif' id='background-gif'/>
+      </div>
+      <div class="slide-complete" id="hover-09">
+        <div class="subtitle-container">
+          <h2>Who is impacted?</h2>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="map-container">
+    <div class="map" id="map"></div>
+  </div>
+
+  <!-- Third set of slides -->
+  <div class="super">
+    <div class="slides" id="slides-04"></div>
+
+    <div class="insert">
+      <div class="section-sticky" id="insert-05">
+        <img src='img\vacantLots-GIF-5.gif' id='background-gif'/>
+      </div>
+
+      <div class="slide-complete" id="hover-11">
+        <div class="subtitle-container">
+          <h2>What can be done?</h2>
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-12">
+        <div class="quote-container">
+          <div class="quote">This could have been another pile of trash or a housing complex that no one in the community could pay for. [...] Instead, it’s a place where the grassroots, the 99%, can come together, enjoy without fears of judgment, and create the future they want for their kids.</div>
+          <div class="quote-author">César Viveros - Neighbor and muralist</div>
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-13">
+        <div class="subtitle-container">
+          <h3>Other Solutions</h3>
+          <p>Vacant lots can be repurposed and protected from buyers outside the community with a myriad of resourses that don't require legal assistance.</p>
+        </div>
+        <div class="diagram-container" id="panels">
+          <div class="action-panel" id="left">Community Development Corporations</div>
+          <div class="action-panel" id="center">Neighborhood Gardens Trust</div>
+          <div class="action-panel" id="right">Philadelphia Land Bank</div>
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-14">
+        <div class="subtitle-container">
+          <h3>Philadelphia Legal Assistance</h3>
+          <p>On top of these tools, a variety of grassroots and legal advocacy organizations such as Philadelphia Legal Assistance are working hard to address this growing problem. Advocacy efforts are currently underway to halt sheriff's sales for certain classes of vacant lots. Some policy solutions already exist, especially for vacant lots that are City-owned. In some cases, stakeholders may even have legal rights: Neighbors who have tended to vacant lots adjoining their properties may have a path to ownership through a legal doctrine known as adverse possession.</p>
+        </div>
+        <div class="diagram-container" id="panels">
+          <div class="action-panel" id="left">Call your representative</div>
+          <div class="action-panel" id="center">Donate to PLA</div>
+          <div class="action-panel" id="right">Request Legal Aid</div>
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-15">
+        <div class="subtitle-container">
+          <h3>Explore Vacant Lots</h3>
+          <p>To that end, we have teamed up with Philadelphia Legal Assistance to create a web app to visualize vacant properties in Philadelphia and aggregate relevant data to assess viable legal and policy interventions. In addition, we have designed an algorithm to predict which properties are at greatest risk of disposition and development.</p>
+        </div>
+
+        <div class="title-bttn-container d-grid gap-2 col-4 mx-auto">
+          <a class="btn btn-primary" href="layoutDS.html" role="button" id="title-bttn-primary">Go to Interactive Dashboard</a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="insert">
+    <div class="footer">
+      <h4>Adrián León, Max Masuda-Farkas, Xuezhu Zhao and Philadelphia Legal Assistance</h4>
+      <p id="credit">This project is based on data obtained from the OpenDataPhilly repository, Philadelphia Legal Assistance and Adam Butler</p>
+      <br>
+      <h4>Special Thanks</h4>
+      <p id="credit">to Philadelphia Legal Assistance, Andria Bibiloni, Jonathan Pyle, Adam Butler, Tom Daniels, John Kromer, Mjumbe Poe, Aaron Fraint, Alex Nelms, Jonathan Clementi, Matt Harris, Michael Fichman and our classmates.</p>
+      <br>
+      <h4>Photo Credits</h4>
+      <p id="credit">Google StreetView, WHYY, The Philadelphia Inquirer and Jazmín Díaz.</p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="https://unpkg.com/showdown@1.9.0/dist/showdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="js/slides.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/layout.js"></script>
+  <!-- <script src="js/index.js"></script> -->
+
+</body>
+</html>

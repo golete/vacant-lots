@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+
+
+  <div class="header hidden">
+    <div class="bttn-container">
+      <a class="btn btn-primary" href="#" role="button" id="header-bttn">Go to Interactive Tool</a>
+      <button type="button" class="btn btn-outline-primary" id="header-bttn">En Español</button>
+    </div>
+  </div>
+
+
+  <div class="insert">
+    <div class="section">
+      <div class="title-container">
+        <h1 id="title">Yes Vacancy</h1>
+        <h3 id="title">The Development Risk of Vacant Lots in Philadelphia</h3>
+      </div>
+
+      <div class="title-credits">
+        <h6>A project from the Weitzman School of Design Smart Cities Practicum</h6>
+        <h6>in collaboration with Philadelphia Legal Assistance</h6>
+      </div>
+
+      <div class="title-bttn-container d-grid gap-2 col-4 mx-auto">
+        <a class="btn btn-outline-primary" href="#section-sticky" role="button" id="title-bttn">Go to Interactive Tool</a>
+        <a class="btn btn-primary" href="#hover-01" role="button" id="title-bttn-primary">Begin Story</a>
+      </div>
+    </div>
+
+    <div class="section-sticky" id="insert-01">
+      <img src='img\vacantLots-GIF-01.gif' id='background-gif'/>
+    </div>
+
+    <div class="slide-complete" id="hover-01">
+      <div class="subtitle-container">
+        <h2>What's in a Vacant Lot?</h2>
+      </div>
+      <br></br>
+      <svg class="arrows">
+        <path class="a1" d="M0 0 L30 32 L60 0"></path>
+        <path class="a2" d="M0 20 L30 52 L60 20"></path>
+        <path class="a3" d="M0 40 L30 72 L60 40"></path>
+      </svg>
+      <p>scroll down</p>
+    </div>
+  </div>
+
+  <!-- Map goes here -->
+  <div class="map-container">
+    <div class="map" id="map"></div>
+  </div>
+
+  <div class="super">
+    <!-- First set of slides -->
+    <div class="slides" id="slides-01"></div>
+
+    <!-- Second complete slide -->
+    <div class="insert">
+      <div class="section-sticky" id="insert-02">
+        <img src='img\vacantLots-GIF-02-HR.gif' id='background-gif'/>
+      </div>
+
+      <div class="slide-complete" id="hover-02">
+        <div class="subtitle-container">
+          <h2>How does this happen?</h2>
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-04">
+        <div class="subtitle-container">
+          <h3>A Property's Life Cycle</h3>
+          <p>Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet</p>
+          <img src="img/diagram-01-propertylifecycle-01.png" class="diagram" alt="Properties Life Cycle">
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-03">
+        <div class="quote-container">
+          <div class="quote">Lorem Ipsum Whatever whatever dolor sit amet amet Vacant Lots Philadelphia whatever whatever dolor sit amet lorem ipsum. Lorem Ipsum Whatever whatever dolor sit amet amet Vacant Lots Philadelphia whatever whatever dolor sit amet lorem ipsum</div>
+          <div class="quote-author">Adam Butler</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="map-container">
+    <div class="map" id="map"></div>
+  </div>
+
+  <!-- Second set of slides -->
+  <div class="super">
+    <div class="slides" id="slides-02"></div>
+
+    <div class="insert">
+      <!-- Third complete slide -->
+      <div class="section-sticky" id="insert-03">
+        <img src='img\background-03.png' id='background-gif'/>
+      </div>
+      <div class="slide-complete" id="hover-05">
+        <div class="subtitle-container">
+          <h2>What's behind this?</h2>
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-06">
+        <div class="subtitle-container">
+          <h3>Development Activity</h3>
+          <p>Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet</p>
+        </div>
+        <div class="diagram-container">
+          <img src="img\diagram-02-permits-A.gif" class="diagram" alt="Zoning Permits by Quarter">
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-08">
+        <div class="quote-container">
+          <div class="quote">Lorem Ipsum Whatever whatever dolor sit amet amet Vacant Lots Philadelphia whatever whatever dolor sit amet lorem ipsum. Lorem Ipsum Whatever whatever dolor sit amet amet Vacant Lots Philadelphia whatever whatever dolor sit amet lorem ipsum</div>
+          <div class="quote-author">Adam Butler</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-container">
+    <div class="map" id="map"></div>
+  </div>
+
+  <!-- Third set of slides -->
+  <div class="super">
+    <div class="slides" id="slides-03"></div>
+
+    <div class="insert">
+      <div class="section-sticky" id="insert-04">
+        <img src='img\vacantLots-GIF-4.gif' id='background-gif'/>
+      </div>
+      <div class="slide-complete" id="hover-09">
+        <div class="subtitle-container">
+          <h2>Who is impacted?</h2>
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-10">
+        <div class="quote-container">
+          <div class="quote">Quote about neighborhood effects and disparity. whatever dolor sit amet amet Vacant Lots Philadelphia whatever whatever dolor sit amet lorem ipsum. Lorem Ipsum Whatever whatever dolor sit amet amet Vacant Lots Philadelphia whatever whatever dolor sit amet lorem ipsum</div>
+          <div class="quote-author">Someone</div>
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-07">
+        <div class="diagram-container">
+          <h4>Neighborhood Effects</h4>
+          <img src="img\diagram-03-permits-B.gif" class="diagram" alt="Zoning Permits by Lustrum">
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+  <div class="map-container">
+    <div class="map" id="map"></div>
+  </div>
+
+  <!-- Third set of slides -->
+  <div class="super">
+    <div class="slides" id="slides-04"></div>
+
+    <div class="insert">
+      <div class="section-sticky" id="insert-04">
+        <img src='img\vacantLots-GIF-4.gif' id='background-gif'/>
+      </div>
+
+      <div class="slide-complete" id="hover-11">
+        <div class="subtitle-container">
+          <h2>What can be done?</h2>
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-12">
+        <div class="quote-container">
+          <div class="quote">Quote about neighborhood effects and disparity. whatever dolor sit amet amet Vacant Lots Philadelphia whatever whatever dolor sit amet lorem ipsum. Lorem Ipsum Whatever whatever dolor sit amet amet Vacant Lots Philadelphia whatever whatever dolor sit amet lorem ipsum</div>
+          <div class="quote-author">Someone</div>
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-13">
+        <div class="subtitle-container">
+          <h3>Other Solutions</h3>
+          <p>Community Development Organizations</p>
+        </div>
+        <div class="diagram-container">
+          <img src="img\diagram-03-permits-B.gif" class="diagram" alt="Other Solutions">
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-13">
+        <div class="subtitle-container">
+          <h3>Philadelphia Legal Assitance</h3>
+          <p>Explanation of what the interactive tool does. Delinquencies, Us Bank Liens, Development Risk.</p>
+        </div>
+        <div class="diagram-container">
+          <img src="img\diagram-03-permits-B.gif" class="diagram" alt="Philadelphia Legal Assistance">
+        </div>
+      </div>
+
+      <div class="slide-complete" id="hover-15">
+        <div class="subtitle-container">
+          <h3>Explore Vacant Lots</h3>
+          <p>Explanation of what the interactive tool does. Delinquencies, Us Bank Liens, Development Risk.</p>
+        </div>
+
+        <div class="title-bttn-container d-grid gap-2 col-4 mx-auto">
+          <a class="btn btn-primary" href="#hover-01" role="button" id="title-bttn-primary">Go to Interactive Dashboard</a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="insert">
+    <div class="footer">
+      <h4>Adrián León, Max Masuda-Farkas, Xuezhu Zhao and Philadelphia Legal Assistance</h4>
+      <p id="credit">This project is based on data obtained from the OpenDataPhilly repository, Philadelphia Legal Assistance and Adam Butler</p>
+      <br>
+      <h4>Special Thanks</h4>
+      <p id="credit">to Philadelphia Legal Assistance, Andria Biblioni, Jonathan Pyle, Adam Butler, Tom Daniels, John Kromer, Mjumbe Poe, Alex Nelms, Jonathan Clementi, Matt Harris, Michael Fichman and our classmates.</p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="https://unpkg.com/showdown@1.9.0/dist/showdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="js/slides.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/layout.js"></script>
+  <!-- <script src="js/index.js"></script> -->
+
+</body>
+</html>

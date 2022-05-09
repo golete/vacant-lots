@@ -1,0 +1,401 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+  background-color: #2aa353;
+  color: white;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #2aa353;
+}
+
+a:hover {
+  color: #fc6203;
+}
+
+.content,
+.section,
+.footer,
+.map-container,
+.slides {
+  border: 0px solid white;
+}
+
+.super {
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-sticky {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  z-index: -1;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2aa353;
+  color: white;
+}
+
+.slide {
+  width: 20rem;
+  margin-left: auto;
+  margin-right: 3rem;
+  margin-bottom: 90vh;
+  margin-top: 5vh;
+  background-color: #ffffffbf;
+  color: #000000;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.slide:first-child {
+  opacity: 0;
+  margin-top: -120vh;
+  z-index: 100;
+}
+
+#slide-20 {
+  opacity: 1;
+  margin-top: 0vh !important;
+}
+
+.slide:last-child {
+  margin-bottom: 90vh;
+}
+
+.map {
+  height: 100%;
+}
+
+.map-container {
+  position: sticky;
+  height: 100vh;
+  top: 0;
+  z-index: -1;
+}
+
+.slide-complete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 105vh;
+  width: 100% ;
+  background-color: transparent;
+  color: white;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 6rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-weight: 400;
+}
+
+h5 {
+  font-weight: 200;
+}
+
+h6 {
+  font-weight: 200;
+  justify-content: center;
+}
+
+h7 {
+  font-weight: 200;
+  justify-content: center;
+}
+
+
+#title {
+  text-align: center;
+}
+
+#subtitle {
+  text-align: center;
+}
+
+p {
+  font-weight: 300;
+  max-width: 75vw;
+}
+
+.ps {
+  font-weight: 300;
+}
+
+#credit {
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.points {
+  margin-top: 0px !important;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color:  #ffffffbf;
+  opacity: 1;
+  transition: all 1.5s;
+  height: 6vh;
+  z-index: 5;
+}
+
+.hidden {
+  background-color: white;
+  opacity: 0;
+  transition: all 1.5s;
+}
+
+.bttn-container {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 3rem;
+}
+
+.btn {
+  margin: 5px;
+  transition: all 1.5s;
+  outline-color: #fc6203 !important;
+  box-shadow: none !important;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #2aa353;
+  border-color: #2aa353;
+}
+
+.btn-outline-primary {
+  color: #2aa353;
+  border-color: #2aa353;
+  border-width: 2px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #ffffff;
+    background-color: #fc6203;
+    border-color: #fc6203;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary.active, .open>.dropdown-toggle.btn-outline-primary {
+    color: #fc6203;
+    background-color: #ffffffff;
+    border-color: #fc6203;
+}
+
+.title-container {
+  position: static;
+}
+
+.subtitle-container, .diagram-container {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.action-panel {
+  display: flex;
+  flex-basis: 100%;
+  height: 25vw;
+  width: auto;
+  background-color: #2aa353;
+  color: #ffffffbf;
+  margin: 1px;
+  padding: 1rem;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+#panels {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 12px;
+}
+
+.diagram-container {
+  width: 80vw;
+  height: auto;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 2vh;
+  margin-bottom: 8vh;
+  opacity: 90%;
+}
+
+.diagram {
+  width: 100%;
+  height: auto;
+  max-width: 80vw;
+  max-height: 57vh;
+  object-fit: contain;
+}
+
+.quote-container {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18pt;
+  max-width: 80vw;
+}
+
+.quote-author {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: normal;
+  font-size: 18pt;
+  font-weight: 600;
+  align-self: flex-end;
+  margin-left: 20vw;
+}
+
+.title-credits {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0rem;
+}
+
+.title-bttn-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+
+#title-bttn-primary {
+  background-color: transparent;
+  border-color: #ffffff;
+  border-width: 1px;
+  color: #ffffff;
+}
+
+#title-bttn-primary:hover, #title-bttn-primary:focus, #title-bttn-primary:active {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  border-width: 1px;
+  color: #2aa353;
+  outline-color: #fc6203 !important;
+}
+
+#title-bttn {
+  background-color: transparent;
+  border-color: transparent;
+  border-width: 1px;
+  color: #ffffff;
+}
+
+#title-bttn:hover, #title-bttn:focus, #title-bttn:active {
+  background-color: transparent;
+  border-color: #fc6203;
+  border-width: 1px;
+  color: #fc6203;
+  outline-color: #fc6203 !important;
+}
+
+#background-gif {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+#slides-01 {
+  z-index: -2;
+  top: -150vh;
+}
+
+
+/* animated arrows for scroll down */
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: static;
+	left: 50%;
+	margin-bottom: 10px;
+	bottom: 20px;
+}
+
+.arrows path {
+	stroke: #ffffffbf;
+	fill: transparent;
+	stroke-width: 1px;
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
