@@ -182,8 +182,8 @@ const slides03 = [
       In 2012, the number of zoning permits returned to pre-Great Recession
       levels, totalling <b>2521</b>. At that time, development activity
       concentrated around three hotspots outside the city center: the Graduate
-      Hospital-Point Breeze area to the southeast, the Northern Liberties-
-      Fishtown neighborhoods to the northeast, and the area west of
+      Hospital-Point Breeze area to the southeast, the Northern
+      Liberties-Fishtown neighborhoods to the northeast, and the area west of
       Broad Street between Fairmount and Cecil B. Moore Avenue.
       `,
     phase: 'permits',
@@ -223,7 +223,7 @@ const slides04 = [
     emphasis: false,
   },
   {
-    title: "...into Majority Minority Neighborhoods",
+    title: "Majority Minority Neighborhoods",
     content: `
       Because vacant properties tend to cluster in specific neighborhoods, the
       impact of the rise in tax foreclosures is disparate across demographic
@@ -238,7 +238,7 @@ const slides04 = [
     emphasis: true,
   },
   {
-    title: "...and Below-Median Income Neighborhoods",
+    title: "...and Sub-Median Income Neighborhoods",
     content: `
       Similarly, areas that have a population lying below the median income
       line contain more vacant and tax delinquent properties than those lying
@@ -253,12 +253,12 @@ const slides04 = [
     emphasis: true,
   },
   {
-    title: "The development frontier: Kensington",
+    title: "The Development Frontier: Kensington",
     content: `
-      A lcoation representative of this change is Kensington, in north
-      Philadelphia. Here, new development has encroached the neighborhood,
-      coming from the Fishtown and Northern Liberties on its east and south
-      ends, respectively.
+      The neighborhood that perhaps most embodies the growing demand for vacant
+      lots is Kensington. Here, new development has begun to spill over into the
+      neighborhood from the hot real estate markets of Fishtown and Northern
+       on its east and south sides, respectively.
     `,
     phase: 'kensington',
     // showpopups: true,
@@ -269,10 +269,12 @@ const slides04 = [
   {
     title: "Vacant Lots in Kensington",
     content: `
-      The effects of this development wave can be observed in the spatial
-      distribution of the available vacant lots in Kensington, the majority of
-      which are concentrated in the the north-west half of the neighborhood,
-      while there are just a few remaining ones on the south-east half.
+      Evidence of this development wave is seen in how there are far fewer
+      available vacant lots in Kensington in the southeast adjacent to
+      Fishtown and Northern Liberties, whereas a greater number of vacant lots
+      remain undeveloped in the northwest quadrant of the neighborhood.
+      As new development continues its gradual creep northward, these remaining
+      vacant lots may well decline in number over time.
     `,
     phase: 'vacantLand',
     // showpopups: true,
@@ -281,15 +283,18 @@ const slides04 = [
     emphasis: false,
   },
   {
-    title: "Community ammenities",
+    title: "Kensington's Community Gardens",
     content: `
-      The same is true for the community ammenities that occupy these lots.
+      As vacant land in Kensington has become more attractive to new
+      development, vacant lots that have been used by the surrounding community
+      have come under pressure.
       <br></br>
-      <b>La Finquita</b>, the community garden where our story started, was one
-      of these delinquent vacant lots in Kensington, until it was foreclosed and
-      sold. Many other properties that have been tended by their neighbors over
-      the last years or decades may face the same fate if no action is taken to
-      protect them.
+      Kensington’s community gardens serve as a poignant example.
+      <br></br>
+      La Finquita, the community garden where our story began, was one such
+      vacant lot in Kensington until it was ultimately sold in 2019. The same
+      fate awaits numerous other community assets in Kensington—and beyond—
+      if no action is taken to protect them.
     `,
     phase: 'garden',
     showpopups: true,
@@ -300,14 +305,15 @@ const slides04 = [
   {
     title: "Cesar Iglesias Community Garden",
     content: `
-     In Kensington, further north from La Finquita, a group of neighbors is
-     fighting to <a href="https://www.inquirer.com/news/north-philadelphia-west-
-     kensington-iglesias-garden-20210528.html">keep the Cesar Andreu Community
-     Garden theirs</a>. The garden was opened in 2012 but recently was
-     partially bought by a private developer and is now at risk of being shut
-     down.
-     <br></br>
-     <img src='img/slide10_cesar.png' alt='Community Garden'>
+      One community asset in Kensington whose future remains uncertain is the
+      César Andreu Iglesias Community Garden.
+      Located in northwest Kensington where development activity is still only
+      just beginning to heat up, the Iglesias Community Garden has been the
+      site of a long campaign by neighbors to preserve its community use. This
+      effort is still underway since the site was partially bought by a private
+      developer and is now at risk of being shut down.
+      <br></br>
+      <img src='img/slide10_cesar.png' alt='Community Garden'>
     `,
     phase: 'gardenZoom',
     showpopups: true,

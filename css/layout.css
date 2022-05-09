@@ -16,6 +16,14 @@ a:hover {
   color: #fc6203;
 }
 
+#link-insert {
+  color: #ffffff;
+}
+
+#link-insert:hover {
+  color: #fc6203;
+}
+
 .content,
 .section,
 .footer,
