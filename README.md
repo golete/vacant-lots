@@ -2,6 +2,14 @@
 * Data Dashboard and Development Risk Assessment for Vacant Lots in Philadelphia
 * A project from the Weitzman School of Design Smart Cities Practicum in collaboration with Philadelphia Legal Assistance
 
+
+Visualize and explore vacant lots in Philadelphia. 
+
+Aggregate relevant data on vacant lots to assist PLA in weighing viable legal and policy interventions. 
+
+Design an algorithm to predict which properties are at greatest risk of disposition and development.
+![image](https://user-images.githubusercontent.com/75751732/167516702-2ff1cc03-2d8c-40fb-9fcb-d234f1baad60.png)
+
 ## Description
 
 This project involved creating a scrolling Story Map that would serve as an introduction and complement to a Dashboard Tool for showing the development risk of Vacant Lots across Philadelphia, as part of the Smart Cities Practicum (MUSA801) in Weitzman School of Design.
