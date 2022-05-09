@@ -223,7 +223,7 @@ p {
 .checkbox-container {
   display: flex;
   flex-direction: row-reverse;
-  margin-left: 4rem;
+  margin-left: 26px;
   position: absolute;
   top: 10px;
 }
@@ -244,18 +244,8 @@ p {
   color: #2aa353;
 }
 
-.textBox {
-  width: 20rem;
-  margin-left: auto;
-  margin-right: 3rem;
-  margin-bottom: 90vh;
-  margin-top: 30vh;
-  background-color: #ffffffbf;
-  color: #000000;
-  padding: 1rem;
-  border-radius: 5px;
-}
 
+/* ============= loading wheel ============= */
 #loader {
   position: absolute;
   left: 50%;
@@ -299,3 +289,12 @@ p {
   to{ bottom:0; opacity:1 }
 }
 
+/* ============= zoom control ============= */
+
+.leaflet-top {
+  top: 75px;
+}
+
+.leaflet-left {
+  left: 20px;
+}

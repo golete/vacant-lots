@@ -8,9 +8,9 @@ var map = L.map('map', {
   zoom: 12,
   maxZoom: 19,
   minZoom: 10,
-  preferCanvas: true,
-  renderer: L.Canvas
+  preferCanvas: true
 });
+
 
 var Stamen_TonerLite = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -90,6 +90,13 @@ var myPointOptions = {
   fillColor: "#ff0000",
   fillOpacity: 0.8,
   color: "#ff0000",
+  opacity: 0,
+}
+var clickedPointOptions = {
+  radius: 10,
+  fillColor: "#A87D7D",
+  fillOpacity: 0.8,
+  color: "#A87D7D",
   opacity: 0,
 }
 
@@ -207,8 +214,6 @@ function loadData() {
           sheriffCat = "No"
         }
 
-        $("#loader").hide();
-
         return L.circleMarker([a.geometry.coordinates[1], a.geometry.coordinates[0]], markerOptions)
         .setRadius(calcRadius(currentZoom))
         .addTo(map)
@@ -223,16 +228,38 @@ function loadData() {
           ) 
       });
 
-      myMarkers.map(function(a) {
-        a.on('click', function(e) {
-          if (a.options.color == "#ff0000") {
-            defaultMarkerOptions.radius = calcRadius(currentZoom);
-            a.setStyle(defaultMarkerOptions);
-          } else {
-            a.setStyle(myPointOptions);
-          }
-        })  
-      })
+      $("#loader").hide();
+
+      // click and unclick points => change colors
+      if (expr.devInterest == 0) {
+        myMarkers.map(function(a) {
+          a.on('click', function() {
+            if (a.options.color == "#A87D7D") {
+              defaultMarkerOptions.radius = calcRadius(currentZoom);
+              a.setStyle(defaultMarkerOptions);
+            } else {
+              a.setStyle(clickedPointOptions);
+            }
+          })  
+        })
+      } else if (expr.devInterest == 1) {
+        myMarkers.map(function(a) {
+          var origColor = a.options.color;
+          a.on('click', function() {
+            if (a.options.color != "#A87D7D") {
+              a.setStyle(clickedPointOptions);
+            } else if (a.options.color == "#A87D7D") {
+             if (origColor == "#ad3a36") {
+              highInterestMarkerOptions.radius = calcRadius(currentZoom);
+              a.setStyle(highInterestMarkerOptions);
+             } else if (origColor == "#56a3a4") {
+              lowInterestMarkerOptions.radius = calcRadius(currentZoom);
+              a.setStyle(lowInterestMarkerOptions);
+             }
+            }
+          })
+        })
+      }
 
     })
 }
@@ -268,7 +295,7 @@ function highlightOne() {
           "<br>Current owner: " + a.properties.owner
           ).openPopup(); 
       });
-      map.setView([myPoint[0]._latlng["lat"]+0.001, myPoint[0]._latlng["lng"]], zoom=16)
+      map.flyTo([myPoint[0]._latlng["lat"]+0.001, myPoint[0]._latlng["lng"]], zoom=16)
     })
 }
 
