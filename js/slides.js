@@ -141,6 +141,9 @@ const slides02 = [
       pandemic, this trend is likely transient since the Philadelphia Sheriff's
       Office moved auctions online, greatly expanding the pool of potential
       buyers.
+      <br></br>
+      <img src='img/sheriff-chart.png' alt='diagram of sheriff sales'>
+
       `,
     phase: 'sheriff',
     // showpopups: true,
@@ -230,6 +233,7 @@ const slides04 = [
       categories. Areas that have a <b>majority non-white population</b>
       contain a far greater share of vacant and tax delinquent properties than
       those that are majority white.
+      <img src='img/disparity-02.png' alt='Racial disparity chart'>
     `,
     phase: 'minority',
     // showpopups: true,
@@ -245,6 +249,7 @@ const slides04 = [
       above the median income line. These demographic patterns show that when
       the City of Philadelphia or U.S. Bank decides to foreclose on a vacant
       property, the impact is not felt equally across demographic groups.
+      <img src='img/disparity-01.png' alt='Racial disparity chart'>
     `,
     phase: 'income',
     // showpopups: true,
