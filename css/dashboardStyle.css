@@ -1,0 +1,36 @@
+body {
+    padding: 0;
+    overflow: hidden;
+    font-family: colfax, helvetica, arial, sans-serif;
+}
+
+p.main {
+  font-size: 24px;
+}
+
+.map {
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+}
+
+/* ============= popup ============= */
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: #ffffffbf;
+  box-shadow: 0 3px 14px rgba(217, 217, 217, 0.4);
+  border-radius: 5px;
+}
+
+.leaflet-popup-content {
+  margin: 1rem 1rem;
+  line-height: 1.4;
+  color: #000000;
+  font-size: 20px;
+  min-width: 400px;
+  max-width: 500px;
+  min-height: 150px;
+  max-height: 300px;
+}
