@@ -1,4 +1,4 @@
-# [What's in a Vacant Lot?](https://golete.github.io/vacant-lots/）
+# [What's in a Vacant Lot?]("https://golete.github.io/vacant-lots/"）
 * Data Dashboard and Development Risk Assessment for Vacant Lots in Philadelphia
 * A project from the Weitzman School of Design Smart Cities Practicum in collaboration with Philadelphia Legal Assistance
 
