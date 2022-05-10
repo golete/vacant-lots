@@ -15,6 +15,7 @@ let dataCollection = { features: [] };
 let propertiesCollection = { features: [] };
 let permitsCollection = { features: [] };
 let phillyCollection = { features: [] };
+let disparityCollection = { features: [] };
 
 let slideIndex = 0;
 
@@ -109,12 +110,14 @@ function initSlides() {
 the slide corresponds with phase of the feature */
 
 let specialPhases = ['delinquent', 'usbank', 'sheriff'];
+let disparityPhases = ['racial', 'income'];
 
 function geometryCollection(slide) {
   let { phase } = slide;
   let { philly } = slide;
   let { emphasis } = slide;
   let { year } = slide;
+  let { side } = slide;
   let collection;
   if (phase === 'vacant') {
     collection = {
@@ -131,6 +134,12 @@ function geometryCollection(slide) {
     collection = {
       type: 'FeatureCollection',
       features: propertiesCollection.features.filter(f => f.properties[phase] === 1),
+      phase
+    };
+  } else if (disparityPhases.includes(phase)) {
+    collection = {
+      type: 'FeatureCollection',
+      features: disparityCollection.features.filter(f => f.properties.phase === phase),
       phase
     };
   } else {
@@ -174,15 +183,29 @@ function updateMap(collection) {
     color = "#ad3a36";
   }
 
-  const geoJsonLayer = L.geoJSON(collection, {
-    style: {
-      color,
-      fillOpacity,
-      width: 3,
-    },
-    pointToLayer: (p, latlng) => L.circleMarker(latlng, markerOptions)
+  let geoJsonLayer;
+
+  if (disparityPhases.includes(collection.phase)) {
+    geoJsonLayer = L.geoJSON(collection, {
+      style: function(f) {
+        switch (f.properties.side) {
+          case 'a': return {color: "#ff6e14", fillOpacity: 0.67, width: 0};
+          case 'b': return {color: "#00bbc2", fillOpacity: 0.67, width: 0};
+        }
+      }
+    }).addTo(geometryLayer)
+    } else {
+      geoJsonLayer = L.geoJSON(collection, {
+        style: {
+          color,
+          fillOpacity,
+          width: 3,
+        },
+        pointToLayer: (p, latlng) => L.circleMarker(latlng, markerOptions)
   })
-    .addTo(geometryLayer);
+    .addTo(geometryLayer)
+    }
+
   console.log('geometry updated!');
   return geoJsonLayer;
 }
@@ -306,6 +329,15 @@ function loadPhilly() {
     });
 }
 
+function loadDisparity() {
+  fetch('data/disparity.json')
+    .then(resp => resp.json())
+    .then(data => {
+      disparityCollection = data;
+      syncMapToCurrentSlide();
+    });
+}
+
 // 5. PROGRAM
 
 // get current slide with scrolling event
@@ -316,5 +348,6 @@ initSlides();
 syncMapToCurrentSlide();
 
 loadProperties();
+loadDisparity();
 loadPermits();
 loadData();

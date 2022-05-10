@@ -183,11 +183,13 @@ const slides03 = [
     title: "...in 2012",
     content: `
       In 2012, the number of zoning permits returned to pre-Great Recession
-      levels, totalling <b>2521</b>. At that time, development activity
-      concentrated around three hotspots outside the city center: the Graduate
-      Hospital-Point Breeze area to the southeast, the Northern
-      Liberties-Fishtown neighborhoods to the northeast, and the area west of
-      Broad Street between Fairmount and Cecil B. Moore Avenue.
+      levels, totalling <b>2521</b>.
+      <br></br>
+      At that time, development activity concentrated around three hotspots
+      outside the city center: the Graduate Hospital-Point Breeze area to the
+      southeast, the Northern Liberties-Fishtown neighborhoods to the northeast,
+      and the area west of Broad Street between Fairmount and Cecil B. Moore
+      Avenue.
       `,
     phase: 'permits',
     year: 2012,
@@ -219,10 +221,10 @@ const slides04 = [
     title: "",
     content: `
       `,
-    phase: 'minority',
+    phase: 'racial',
     // showpopups: true,
     bounds: [[39.9, -75.35], [40.16, -74.87]],
-    philly: true,
+    philly: false,
     emphasis: false,
   },
   {
@@ -234,13 +236,13 @@ const slides04 = [
       contain a far greater share of vacant and tax delinquent properties than
       those that are majority white.
       <br></br>
-      <img src='img/disparity-02.png' alt='Racial disparity chart'>
+      <img src='img/disparity-01.png' alt='Racial disparity chart'>
     `,
-    phase: 'minority',
+    phase: 'racial',
     // showpopups: true,
     bounds: [[39.9, -75.35], [40.16, -74.87]],
-    philly: true,
-    emphasis: true,
+    philly: false,
+    emphasis: false,
   },
   {
     title: "...and Sub-Median Income Neighborhoods",
@@ -251,13 +253,13 @@ const slides04 = [
       the City of Philadelphia or U.S. Bank decides to foreclose on a vacant
       property, the impact is not felt equally across demographic groups.
       <br></br>
-      <img src='img/disparity-01.png' alt='Racial disparity chart'>
+      <img src='img/disparity-02.png' alt='Racial disparity chart'>
     `,
     phase: 'income',
     // showpopups: true,
     bounds: [[39.9, -75.35], [40.16, -74.87]],
-    philly: true,
-    emphasis: true,
+    philly: false,
+    emphasis: false,
   },
   {
     title: "The Development Frontier: Kensington",
